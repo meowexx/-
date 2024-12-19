@@ -1,0 +1,408 @@
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Стили для body */
+body {
+    background-color: #ffffff;
+    color: #1A1A1D;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Стили для header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    background-color: #6F2232;
+    color: white;
+    flex-direction: column;
+}
+
+header .logo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+header .logo img {
+    width: 40px;
+    height: 40px;
+}
+
+header .group {
+    font-size: 14px;
+    text-align: right;
+    line-height: 140%;
+}
+
+/* Стили для nav */
+nav {
+    background-color: #333;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 10px 0;
+    display: flex; /* Используем Flexbox для навигации */
+    justify-content: space-around; /* Равномерное распределение элементов */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #C3073F;
+    text-decoration: none;
+}
+
+nav a:active {
+    color: #a566f2;
+}
+
+/* Стили для заголовков */
+h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+h2 {
+    font-size: 28px;
+    color: #666;
+}
+
+
+/* Стили для контента */
+.main-content {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.content {
+    width: 75%;
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-photo {
+    width: 200px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #6F2232;
+}
+
+.contacts {
+    display: flex;
+    justify-content: center;
+}
+
+.contacts a {
+    margin: 0 10px;
+    color: #ffffff;
+}
+
+/* Медиа-запросы */
+@media (max-width: 768px) {
+    /* Уменьшаем размер шрифта для заголовков */
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .main-content {
+        flex-direction: column; /* Ставим контент вертикально */
+    }
+
+    .sidebar {
+        width: 100%; /* Страница занимает всю ширину */
+        padding: 10px; /* Уменьшаем отступы */
+    }
+
+    .content {
+        width: 100%; /* Контент также занимает всю ширину */
+        padding: 10px; /* Уменьшаем отступы */
+    }
+
+    .profile-photo {
+        width: 150px; /* Уменьшаем размер фото профиля */
+        margin-left: 0; /* Убираем отступ слева */
+    }
+
+    nav ul {
+        flex-direction: column; /* Изменяем на вертикальное расположение */
+        align-items: center; /* Выравниваем элементы по центру */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Уменьшаем отступы между элементами навигации */
+    }
+
+    .contacts {
+        flex-direction: column; /* Размещаем контакты вертикально */
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        padding: 5px; /* Дополнительное уменьшение отступов для очень малых экранов */
+    }
+
+    .content {
+        padding: 5px; /* Дополнительное уменьшение отступов для очень малых экранов */
+    }
+
+    .profile-photo {
+        width: 120px; /* Уменьшаем размер фото профиля для очень малых экранов */
+    }
+
+    h1, h2 { text-align: center; /* Выравниваем заголовки по центру на маленьких экранах */
+    }
+}
+
+/* Стили для таблиц */
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th {
+    color: #fff;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #C3073F;
+    text-align: left;
+}
+
+th {
+    background-color: #ffc0cb;
+}
+
+
+/* Медиа-запросы для адаптации под мобильные устройства таблицы*/
+@media (max-width: 600px) {
+    
+    header {
+        flex-direction: column; /* Переход на вертикальное выравнивание для заголовка */
+    }
+
+    .content {
+        width: 100%; /* Ширина контента на мобильных устройствах 100% */
+        padding: 10px; /* Уменьшение отступов */
+    }
+
+    nav ul {
+        flex-direction: column; /* Изменение на вертикальное расположение элементов навигации */
+        align-items: center; /* Выравнивание элементов по центру */
+    }
+
+    nav ul li {
+
+        margin: 10px 0; /* Увеличиваем отступ между элементами навигации */
+    }
+
+    h1 {
+        font-size: 28px; /* Уменьшение размера заголовка h1 */
+    }
+
+    h2 {
+        font-size: 24px; /* Уменьшение размера заголовка h2 */
+    }
+
+    .main-heading {
+        font-size: 2em; /* Уменьшаем размер основного заголовка */
+    }
+
+    .sub-heading {
+        font-size: 1.5em; /* Уменьшаем размер подзаголовка */
+    }
+
+    .text-paragraph {
+        margin: 10px 0; /* Уменьшение отступа для абзацев текста */
+    }
+
+    table {
+        font-size: 12px; /* Уменьшение шрифта в таблицах */
+    }
+}
+        /* Скрыть таблицу лекций по умолчанию */
+        #lectures-table {
+            display: none;
+            transition: all 0.5s ease;
+        }
+
+        /* Стиль для кнопки */
+        button {
+            background: #35424a;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #6F2232;
+        }
+
+        /* Класс для анимации появления */
+        .show {
+            display: block !important;
+        }
+/* Для карты универа */
+object {
+    margin: 20px 0;
+}
+
+iframe {
+    border: 0;
+}
+/* Контейнер для карточек */
+.navGrid {
+    flex: 1;
+    text-align: center;
+    width: 100%;
+}
+
+/* Стили для карточек */
+.card {
+    background-color: #6F2232;
+    border: 2px solid #C3073F;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Установим ширину в 100% для мобильных */
+    max-width: 300px; /* Максимальная ширина карточек */
+    flex: none; /* Не позволяем карточкам изменять размер */
+    margin: 10px auto; /* Центрируем карточки */
+    display: inline-block;
+}
+
+/* Используем медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+    .card {
+        width: calc(85% - 20px); /* Ширина карточек на мобильных */
+    }
+}
+
+.card:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+}
+
+/* Стили для заголовков карточек */
+.card h3 {
+    margin: 10px 0;
+    color: #44E50;
+}
+
+/* Стили для изображений */
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Стили для кнопок */
+button {
+    background-color: #950740;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Эффект для кнопки при наведении */
+button:hover {
+    background-color: #C3073F;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 5px 0;
+}
+
+form input,
+form select,
+form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+hr {
+    margin: 20px 0;
+}
